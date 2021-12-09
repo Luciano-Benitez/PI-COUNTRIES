@@ -1,5 +1,12 @@
+.back{
+    background-image: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    display: flow-root;
+    background-size: cover;
+}
+
 .link{
-    color: rgb(0, 0, 0); 
+    color: rgba(255, 255, 255, 0.842) 
     
 };
 

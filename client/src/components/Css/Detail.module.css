@@ -1,5 +1,5 @@
 .app{
-    background: url('../img/detail.jpg');
+    background: url('../img/fondo\ celeste\(1\).jpg');
     background-repeat: no-repeat;
     background-size: cover;
     display: flow-root;
@@ -27,4 +27,4 @@
     height: 15px;
     display: inline-block;
     
-}
+};

@@ -1,0 +1,43 @@
+.all{
+    background: url('../img/fondo\ celeste.jpg');
+    font-size: 20px;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    display: flow-root;
+}
+
+.button{
+    float:none;
+    right: 25%;
+    margin-right: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    overflow:auto;
+    position:relative;
+    width:60px;height:40px; /* tamaño del boton */
+};  
+
+.h2 {
+    float: none;
+    text-align:right;
+    margin:0;
+
+};
+
+.p{
+   float: none;
+   position: relative;
+   right: 50%;
+   display: inline-flex;
+}
+
+.label{
+    position: relative;
+    float: none;
+    display:flex;
+    left: 35%;
+}
+
+.create{
+    width: 25rem;height:40px;
+}

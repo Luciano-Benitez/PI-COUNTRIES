@@ -1,0 +1,22 @@
+.link{
+    color: rgb(0, 0, 0); 
+    
+};
+
+.all{
+    position: relative;
+    height: 5rem;
+}
+
+.all button{
+    display: flex;
+    position: absolute;
+    left: 10%;
+};
+
+.back{
+    background-image: ('../img/planeta-Tierra.jpg');
+}
+
+
+

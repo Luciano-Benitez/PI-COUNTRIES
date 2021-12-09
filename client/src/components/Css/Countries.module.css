@@ -1,0 +1,27 @@
+.cts {
+    background-color:rgb(211, 211, 211);
+    border: solid;
+    /* height:auto; */
+    width: max-content;
+    border-radius:4px;
+    /* margin: 5rm; */
+    padding: 25px;
+    /* overflow: auto; */
+    border-color:rgba(128, 128, 128, 0.575);
+    display: inline-grid;
+    margin: 20px;
+};
+
+ 
+
+.img{
+    border-radius: 5px;
+};
+
+.h3{
+    color: rgb(253, 253, 253);
+};
+
+.h4{
+    color: rgb(255, 255, 255);
+}

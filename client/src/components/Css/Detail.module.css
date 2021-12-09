@@ -1,0 +1,30 @@
+.app{
+    background: url('../img/detail.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flow-root;
+}
+
+.button{
+    position: absolute;
+    left: 10%;
+    width: 7%;height:4%;
+};
+
+.app img{
+    position: absolute;
+    right: 100px;
+};
+
+.app h3 {
+    display: flex;
+}
+
+.app h4{
+    font-size: 900;
+    font-weight: 600;
+    text-indent: 75px;
+    height: 15px;
+    display: inline-block;
+    
+}

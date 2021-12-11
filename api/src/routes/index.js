@@ -78,8 +78,7 @@ router.get('/countries', async (req, res) => {
     })
     // Si no hay datos, se crean
     if(!full.length){
-        // bulkCreate busca los campos en el objeto y los pasa a la tabla
-        // los datos del objeto para los que no hay campos en
+        // bulkCreate busca los campos en el objeto y los pasa a la tabla.
 await Country.bulkCreate(resultAll)
     } 
 } catch (error){
@@ -180,6 +179,22 @@ router.post('/activity', async (req, res) => {
     console.log(error)
     res.status(404).send('No se pudo crear la actividad')
 }
+});
+
+router.get('/activities', async (req, res) =>{
+  try {
+      const activities = await Activity.findAll({
+        attributes: ["name"],
+        through: {
+            attributes: []
+        }
+      });
+      const result = await activities.map(e => e.name);
+      res.status(200).json(result);
+
+  } catch (error) {
+      console.log(error);
+  }
 });
 
 module.exports = router;

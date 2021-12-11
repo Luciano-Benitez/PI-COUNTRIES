@@ -2,7 +2,7 @@ import React from 'react';
 import{Link} from 'react-router-dom';
 import { useEffect} from 'react'; 
 import {useDispatch, useSelector} from 'react-redux';
-import {getCountries, orderByName, orderByContinent, orderByActivity} from '../actions/index'
+import {getCountries, orderByName, orderByContinent, getActivities, orderByActivity} from '../actions/index'
 import {SearchBar} from './SearchBar';
 import {Countries} from './Countries';
 import {Paginado} from './Paginado';
@@ -25,6 +25,10 @@ export function Home(){
     useEffect(() => {
         dispatch(getCountries())
     },[dispatch]);
+    
+    useEffect(() => {
+        dispatch(getActivities())
+    },[dispatch]);
 
     function Recargar(e){
         e.preventDefault();
@@ -46,9 +50,10 @@ export function Home(){
     };
 
     function handleCheck(e){
-        if(e.target.checked){
-            dispatch(orderByActivity(e.target.value));
-        }
+        e.preventDefault();
+        dispatch(orderByActivity(e.target.value));
+        setCurrentPage(1);
+        setOrder(`Ordernado ${e.target.value}`);
     };
 
     return(
@@ -81,8 +86,14 @@ export function Home(){
             <option value="Antarctica">Antarctica</option>
         </select></label>
 
-        <label> Filtrar por Actividades
-            <input type='checkbox' value='act' onChange={handleCheck}/></label>
+        <label> Filtrar por Actividad
+            <select onChange={e =>handleCheck(e) } >
+                <option>-Select-</option>
+                <option value="Running">Running</option>
+                <option value="Surf">Surf</option>
+            </select>
+        </label>    
+
         </div>
         
         <div>

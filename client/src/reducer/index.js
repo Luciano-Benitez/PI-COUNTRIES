@@ -1,10 +1,11 @@
 import {GET_COUNTRIES, ORDER_BY_NAME, ORDER_BY_CONTINENT,
-        GET_COUNTRY_NAME, GET_COUNTRY_DETAIL, POST_CREATE, ORDER_BY_ACTIVITY} from '../actions/types'
+        GET_COUNTRY_NAME, GET_COUNTRY_DETAIL, POST_CREATE, ORDER_BY_ACTIVITY, ORDER_ACT} from '../actions/types'
 
  const initialState = {
     countries: [],
     allCountries: [],
     detail: [],
+    activities: []
  };
 
 const reducer = (state = initialState, {type, payload}) => {
@@ -51,13 +52,19 @@ const reducer = (state = initialState, {type, payload}) => {
                 };
 
             case ORDER_BY_ACTIVITY:
-                const allCountries = state.allCountries
-                const result = payload === 'act' ? allCountries.filter(e => e.activities[0]):null
-
+                const allCountries = state.allCountries;
+                const activities = state.activities;
+                const result = payload === activities && allCountries.filter(e => e.activities[0].name === payload);
                 return {
                     ...state,
                     countries: result
                 };
+
+                case ORDER_ACT:
+                    return {
+                        ...state,
+                        activities: payload
+                    };
 
         default:
             return state

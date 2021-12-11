@@ -1,6 +1,8 @@
 import axios from 'axios';
 import {GET_COUNTRIES, ORDER_BY_NAME, ORDER_BY_CONTINENT,
-     GET_COUNTRY_NAME, GET_COUNTRY_DETAIL, ORDER_BY_ACTIVITY} from './types';
+     GET_COUNTRY_NAME, GET_COUNTRY_DETAIL, ORDER_BY_ACTIVITY, ORDER_ACT} from './types';
+
+
 
 
 export function getCountries(){
@@ -61,6 +63,16 @@ export function orderByActivity(payload){
         payload
     }
 };
+
+export function getActivities(){
+    return async function(dispatch){
+        const result = await axios.get('http://localhost:3001/activities');
+        return dispatch({
+            type: ORDER_ACT,
+            payload: result.data
+        });
+    }
+}
 
 export function postActivity(payload) {
     return async function(dispatch){

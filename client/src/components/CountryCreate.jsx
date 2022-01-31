@@ -79,12 +79,12 @@ export function CountryCreate(){
                     </div>
                     
                     <div className={style.label}>
-                <label>Duracion/HS: </label>
+                    <label>Duracion/HS: </label>
                     <input type="text" name="duration" value={state.duration} onChange={handleChange} />
                     </div>
                     
                     <div className={style.label} >
-                <p>Temporada: </p>
+                    <p>Temporada: </p>
                     <p>Verano<input type="checkbox"  value={'Verano'} onChange={checkSeason} /></p>
                     <p>Otoño<input type="checkbox"  value={'Otoño'} onChange={checkSeason} /></p>
                     <p>Invierno<input type="checkbox"  value={'Invierno'} onChange={checkSeason} /></p>
@@ -92,10 +92,10 @@ export function CountryCreate(){
                     </div>
                      
                     <div className={style.label} >
-                <p>
+                    <p>
                     Pais:
                     <input type="text" name="countries" value={state.countries} onChange={handleChange} />
-                </p>
+                    </p>
                     </div>  
 
                 <button className={style.create} type="submit">¡Crear Receta!</button>

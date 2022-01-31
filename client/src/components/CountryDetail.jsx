@@ -8,8 +8,8 @@ import style from './Css/Detail.module.css'
 
 export function CountryDetail(props){
     const {id} = props.match.params;
-    const detail = useSelector(state => state.detail);
     const dispatch = useDispatch();
+    const detail = useSelector(state => state.detail);
 
     useEffect(() => {
         dispatch(getCountryDetail(id))

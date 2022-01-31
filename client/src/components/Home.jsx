@@ -1,6 +1,6 @@
 import React from 'react';
 import{Link} from 'react-router-dom';
-import { useEffect} from 'react'; 
+import {useEffect} from 'react'; 
 import {useDispatch, useSelector} from 'react-redux';
 import {getCountries, orderByName, orderByContinent, getActivities, orderByActivity} from '../actions/index'
 import {SearchBar} from './SearchBar';
@@ -18,7 +18,7 @@ export function Home(){
     const indexOfFirstCountry = indexOfLastCountry - countryPerPage
     const currentCountry = allCountries?.slice(indexOfFirstCountry, indexOfLastCountry);
 
-    const paginado = (pageNumbers) =>{
+    const paginado = (pageNumbers) => {
         setCurrentPage(pageNumbers)
     };
 

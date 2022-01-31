@@ -147,8 +147,8 @@ router.post('/activity', async (req, res) => {
               where:{
                 name: countries
               }
-            });
-            await newActivity.addCountry(result) 
+        });
+        await newActivity.addCountry(result) 
       }
     };
   //   if(countries !== null){

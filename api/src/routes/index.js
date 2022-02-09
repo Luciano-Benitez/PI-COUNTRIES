@@ -151,16 +151,7 @@ router.post('/activity', async (req, res) => {
         await newActivity.addCountry(result) 
       }
     };
-  //   if(countries !== null){
-  //     countries.forEach(async (country) => {
-  //     let activityCountry = await Country.findOne({
-  //           where: {
-  //               name: country
-  //           }
-  //     }); 
-  //       await newActivity.addCountry(activityCountry)
-  //   });
-  // };
+ 
   
     // let result = await Country.findAll({
     //     where:{
